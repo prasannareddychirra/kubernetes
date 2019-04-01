@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: my-httpd-service
+spec:
+  selector:
+    app: webservers
+  type: LoadBalancer
+  ports:
+    - name: my-apache-port
+      port: 8080
+      targetPort: 80
